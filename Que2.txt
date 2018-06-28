@@ -1,0 +1,9 @@
+f = open("Passage.txt",'r')
+c=0
+line = f.readlines()
+for line in f:
+    print( type(line))
+a=len(line)
+for i in range((a)):
+    c+=len(line[i].split())
+print("The count of words is {}".format(c))
