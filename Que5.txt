@@ -1,0 +1,13 @@
+file = open("Numbers.txt",'w')
+for i in range(10):
+    ip = input("input{}:".format(i))
+    file.write(ip + "\n")
+file.close()
+with open('Numbers.txt', 'r') as f:
+    lines = f.readlines()
+    numbers = [int(e.strip()) for e in lines]
+    numbers.sort()
+    print(numbers)
+    with open('Sorted.txt', 'w') as f2:
+        for item in numbers:
+            f2.write("%s\n" % item)
