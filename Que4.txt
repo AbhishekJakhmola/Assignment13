@@ -1,0 +1,8 @@
+with open("Passage.txt") as P:
+  with open('Cool.txt') as C:
+      with open("Fun.txt", "w") as F:
+        Plines = P.readlines()
+        Clines = C.readlines()
+        for i in range(len(Plines)):
+            line = Clines[i].strip() + ' ' + Plines[i]
+            F.write(line)
