@@ -1,0 +1,8 @@
+x = int(input("Enter the number of lines:"))
+f = open("Passage.txt",'r')
+line = f.readlines()
+for line in f:
+    print( type(line))
+a=len(line)
+for i in range((a-x),a):
+    print(line[i])
